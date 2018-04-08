@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  CFStack1:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-1853ac65
+      Tags:
+        - Key: Name
+          Value: CFInstance
