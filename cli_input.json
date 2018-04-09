@@ -1,0 +1,23 @@
+{
+    "StackName": "hmag-prod-all-cf",
+    "TemplateURL": "https://s3.amazonaws.com/campussvcs-prod-bucket/hmag/prod/parent.yml",
+    "Tags": [
+        {
+            "Key": "Name",
+            "Value": "hmag-prod-all-cf"
+        },
+        {
+            "Key": "environment",
+            "Value": "Production"
+        },
+        {
+            "Key": "huit_assetid",
+            "Value": "9682"
+        },
+        {
+            "Key": "product",
+            "Value": "hmag"
+        }
+    ],
+    "Capabilities": [ "CAPABILITY_NAMED_IAM" ]
+}
