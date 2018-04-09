@@ -20,3 +20,12 @@ Execute SSM command to start user-data execution
 ## Replace Instance-Ids with instance IDs created by stack ##
 
     
+aws cloudformation create-stack --stack-name CFStack3 --template-body file://CFStack1.yml
+aws cloudformation update-stack --stack-name CFStack3 --template-body file://CFStack1.yml
+aws cloudformation update-stack --stack-name CFStack3 --template-url https://s3.amazonaws.com/shankarthanu-cftemplates/Stack1/CFStack1.yml
+
+
+aws cloudformation update-stack --cli-input-json file://prod/cli_input.json
+
+
+aws s3 sync . s3://shankarthanu-cftemplates/Stack1/CFStack1.yml

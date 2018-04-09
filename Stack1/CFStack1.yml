@@ -6,4 +6,4 @@ Resources:
       ImageId: ami-1853ac65
       Tags:
         - Key: Name
-          Value: CFInstanceS3-1
+          Value: CFInstance11
