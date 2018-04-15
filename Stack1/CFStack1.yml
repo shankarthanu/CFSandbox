@@ -17,7 +17,9 @@ Resources:
       KeyName: !Ref KeyName
       Tags:
         - Key: Name
-          Value: CFInstanceS3-1
+          Value: CFInstanceS3-3
+        - Key: Name1
+          Value: CFInstanceS3-2
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:

@@ -1,0 +1,4 @@
+{
+    "StackName": "CFStactTest1",
+    "TemplateURL": "https://s3.amazonaws.com/shankarthanu-cftemplates/Stack1/CFStack1.yml"
+}
