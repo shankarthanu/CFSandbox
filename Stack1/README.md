@@ -14,9 +14,9 @@ Create / update stack
 
     aws cloudformation create-stack --cli-input-json file://cli_input1.json
 
-    aws cloudformation update-stack --stackname CFStack3 --template-body //CFStack1.yml --parameters //Parameters.json
+    aws cloudformation update-stack --stackname CFStack3 --template-body file://CFStack1.yml --parameters file://Parameters.json
 
-
+    aws cloudformation create-stack --stack-name CFStack6 --template-body file://CFStack1.yml --parameters file://Parameters.json
 
 Prod How to Create Change Set
 

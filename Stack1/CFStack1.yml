@@ -6,9 +6,15 @@ Parameters:
   InstanceType:
     Description: WebServer EC2 instance type
     Type: String
-    Default: t2.micro   
+    Default: t2.micro 
+  Param1:
+    Default: "Param1"
+    Type: String
+  Param2:
+    Default: "Param2"
+    Type: String 
 Resources:
-  CFStack1:
+  Instance1:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:

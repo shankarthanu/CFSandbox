@@ -1,10 +1,10 @@
 [
   {
-    "ParameterKey": "Name1",
+    "ParameterKey": "Param1",
     "ParameterValue": "MyName1"
   }, 
   {
-    "ParameterKey": "Name2",
+    "ParameterKey": "Param2",
     "ParameterValue": "MyName2"
   }
 ]
