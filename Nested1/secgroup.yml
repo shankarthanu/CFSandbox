@@ -1,0 +1,26 @@
+Description:  Nested CloudFormation Stack - Custom  Security Groups
+
+Resources:
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: '0.0.0.0/0'
+
+      Tags:
+        - Key: Name
+          Value: !Sub "Nested sec group"
+    Type: AWS::EC2::SecurityGroup
+
+Outputs:
+  Secgroup:
+    Description: Securitygroup
+    Value: !Join
+       - ','
+       - - !GetAtt
+           - InstanceSecurityGroup
+           - GroupId

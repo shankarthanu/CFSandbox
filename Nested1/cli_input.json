@@ -1,0 +1,15 @@
+{
+    "StackName": "Nested1",
+    "TemplateURL": "https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/Nested1.yml",
+    "Tags": [
+        {
+            "Key": "Name",
+            "Value": "Nested1"
+        },
+        {
+            "Key": "product",
+            "Value": "Test"
+        }
+    ],
+    "Capabilities": [ "CAPABILITY_NAMED_IAM" ]
+}

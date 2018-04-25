@@ -1,0 +1,50 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  KeyName:
+   Default: "MyNVAKey"
+   Type: String
+  InstanceType:
+    Description: WebServer EC2 instance type
+    Type: String
+    Default: t2.micro 
+  Param1:
+    Default: "Param1"
+    Type: String
+  Param2:
+    Default: "Param2"
+    Type: String 
+Resources:
+  Instance1:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SecurityGroups: !GetAtt
+          - SecurityGroup
+          - Outputs.Secgroup	
+      ImageId: ami-1853ac65
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: CFInstanceS3-3
+        - Key: Name1
+          Value: CFInstanceS3-2
+
+  SecurityGroup:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/secgroup.yml
+      TimeoutInMinutes: '60'
+
+Outputs:
+  Instances:
+    Description: Instance
+    Value: !Ref Instance1
+  InstanceIP:
+    Description: ip of the instance
+    Value: !GetAtt 
+        - Instance1
+        - PrivateIp
+  InstanceSgs:
+    Description: Security Group ID
+    Value: !GetAtt
+          - SecurityGroup
+          - Outputs.InstanceSecurityGroup	
