@@ -3,6 +3,9 @@
 Prod S3 Contents:
 
 	aws s3 sync . s3://shankarthanu-cftemplates/Stack1
+	
+	aws s3 sync . s3://enquizit-cfsandbox-bucket/Stack1
+	
 
 	
 Create / update stack

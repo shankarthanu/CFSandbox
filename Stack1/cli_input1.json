@@ -1,4 +1,15 @@
 {
     "StackName": "CFStactTest1",
-    "TemplateURL": "https://s3.amazonaws.com/shankarthanu-cftemplates/Stack1/CFStack1.yml"
+    "TemplateURL": "https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Stack1/CFStack1.yml",
+     "Tags": [
+        {
+            "Key": "Name",
+            "Value": "Nested1-1"
+        },
+        {
+            "Key": "product",
+            "Value": "Test"
+        }
+    ],
+    "Capabilities": [ "CAPABILITY_NAMED_IAM" ]
 }
