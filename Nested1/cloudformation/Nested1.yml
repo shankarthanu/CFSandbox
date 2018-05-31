@@ -17,9 +17,8 @@ Resources:
   Instance1:
     Type: 'AWS::EC2::Instance'
     Properties:
-      SecurityGroups: !GetAtt
-          - SecurityGroup
-          - Outputs.Secgroup	
+      SecurityGroups:
+        - !GetAtt [ SecurityGroup, Outputs.Secgroup ]
       ImageId: ami-1853ac65
       KeyName: !Ref KeyName
       Tags:
@@ -31,7 +30,7 @@ Resources:
   SecurityGroup:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/secgroup.yml
+      TemplateURL: https://s3.amazonaws.com/shankarthanu-cftemplates/Nested1/cloudformation/secgroup.yml
       TimeoutInMinutes: '60'
 
 Outputs:
@@ -47,4 +46,4 @@ Outputs:
     Description: Security Group ID
     Value: !GetAtt
           - SecurityGroup
-          - Outputs.InstanceSecurityGroup	
+          - Outputs.Secgroup	

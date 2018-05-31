@@ -1,10 +1,10 @@
 {
-    "StackName": "Nested1",
-    "TemplateURL": "https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/Nested1.yml",
+    "StackName": "Nested1-2",
+    "TemplateURL": "https://s3.amazonaws.com/shankarthanu-cftemplates/Nested1/cloudformation/Nested1.yml",
     "Tags": [
         {
             "Key": "Name",
-            "Value": "Nested1"
+            "Value": "Nested1-1"
         },
         {
             "Key": "product",

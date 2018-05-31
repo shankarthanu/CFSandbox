@@ -21,6 +21,4 @@ Outputs:
     Description: Securitygroup
     Value: !Join
        - ','
-       - - !GetAtt
-           - InstanceSecurityGroup
-           - GroupId
+       - - !Ref InstanceSecurityGroup

@@ -2,11 +2,15 @@
 
 Prod S3 Contents:
 
-	aws s3 sync . s3://enquizit-cfsandbox-bucket/Nested1
+	aws s3 sync --exclude "*" --include "cloudformation/*" . s3://enquizit-cfsandbox-bucket/Nested1
 
-	
+	aws s3 sync --exclude "*" --include "cloudformation/*" . s3://shankarthanu-cftemplates/Nested1
+
+	Amazon S3enquizit-cfsandbox-bucket/Nested1/cloudformation
+
 Create / update stack
-	aws cloudformation create-stack --stack-name Nested1 --template-url https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/Nested1.yml
+	aws cloudformation create-stack --stack-name Nested1 --template-url https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/cloudformation/Nested1.yml
+	aws cloudformation create-stack --cli-input-json file://dev/cli_input.json
 
 	aws cloudformation create-stack --cli-input-json file://cli_input1.json
 	aws cloudformation update-stack --cli-input-json file://cli_input1.json
