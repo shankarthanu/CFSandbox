@@ -18,7 +18,7 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:
-        - simplestack-InstanceSecurityGroup-N4W9Z5K53HIT # !GetAtt [ SecurityGroup, Outputs.Secgroup ]
+        - !GetAtt [ SecurityGroup, Outputs.Secgroup ] # simplestack-InstanceSecurityGroup-N4W9Z5K53HIT # 
       ImageId: ami-1853ac65
       KeyName: !Ref KeyName
       Tags:
@@ -26,12 +26,12 @@ Resources:
           Value: CFInstanceS3-3
         - Key: Name1
           Value: CFInstanceS3-2
-#
-#  SecurityGroup:
-#    Type: AWS::CloudFormation::Stack
-#    Properties:
-#      TemplateURL: https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/cloudformation/secgroup.yml
-#      TimeoutInMinutes: '60'
+
+  SecurityGroup:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/cloudformation/secgroup.yml
+      TimeoutInMinutes: '60'
 
 Outputs:
   Instances:
