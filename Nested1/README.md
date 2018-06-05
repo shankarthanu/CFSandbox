@@ -12,7 +12,7 @@ Create / update stack
 	aws cloudformation create-stack --stack-name Nested1 --template-url https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/cloudformation/Nested1.yml
 	aws cloudformation create-stack --cli-input-json file://dev/cli_input.json
 
-	aws cloudformation create-stack --cli-input-json file://cli_input1.json
+	aws cloudformation create-stack --cli-input-json file://cli_input.json
 	aws cloudformation update-stack --cli-input-json file://cli_input1.json
 
 	aws cloudformation create-stack --stack-name CFStack3 --template-body file://Nested1.yml

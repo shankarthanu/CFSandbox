@@ -1,6 +1,6 @@
 {
     "StackName": "Nested1-2",
-    "TemplateURL": "https://s3.amazonaws.com/shankarthanu-cftemplates/Nested1/cloudformation/Nested1.yml",
+    "TemplateURL": "https://s3.amazonaws.com/enquizit-cfsandbox-bucket/Nested1/cloudformation/root.yml", 
     "Tags": [
         {
             "Key": "Name",
